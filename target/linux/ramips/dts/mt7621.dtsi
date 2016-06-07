@@ -116,7 +116,48 @@
 			reg-shift = <2>;
 			reg-io-width = <4>;
 			no-loopback-test;
+			pinctrl-names = "default";
+                        pinctrl-0 = <&uart1_pins>;
+			status = "okay";
 		};
+
+
+		uart2: uart2@d00 {
+			compatible = "ns16550a";
+                        reg = <0xc00 0x100>;
+
+                        clocks = <&sysclock>;
+
+                        interrupt-parent = <&gic>;
+                        interrupts = <GIC_SHARED 27 IRQ_TYPE_LEVEL_HIGH>;
+
+			pinctrl-names = "default";
+                        pinctrl-0 = <&uart2_pins>;
+
+                        reg-shift = <2>;
+                        reg-io-width = <4>;
+                        no-loopback-test;
+			status = "disabled";
+                };
+
+		uart3: uart3@e00 {
+                        compatible = "ns16550a";
+                        reg = <0xc00 0x100>;
+
+                        clocks = <&sysclock>;
+
+                        interrupt-parent = <&gic>;
+                        interrupts = <GIC_SHARED 28 IRQ_TYPE_LEVEL_HIGH>;
+
+			pinctrl-names = "default";
+                        pinctrl-0 = <&uart3_pins>;
+
+                        reg-shift = <2>;
+                        reg-io-width = <4>;
+                        no-loopback-test;
+			status = "disabled";
+                };
+
 
 		spi@b00 {
 			status = "okay";
