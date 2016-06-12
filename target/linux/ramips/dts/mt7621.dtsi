@@ -124,7 +124,7 @@
 
 		uart2: uart2@d00 {
 			compatible = "ns16550a";
-                        reg = <0xc00 0x100>;
+                        reg = <0xd00 0x100>;
 
                         clocks = <&sysclock>;
 
@@ -137,12 +137,12 @@
                         reg-shift = <2>;
                         reg-io-width = <4>;
                         no-loopback-test;
-			status = "disabled";
+			status = "okay";
                 };
 
 		uart3: uart3@e00 {
                         compatible = "ns16550a";
-                        reg = <0xc00 0x100>;
+                        reg = <0xe00 0x100>;
 
                         clocks = <&sysclock>;
 
@@ -155,7 +155,7 @@
                         reg-shift = <2>;
                         reg-io-width = <4>;
                         no-loopback-test;
-			status = "disabled";
+			status = "okay";
                 };
 
 
