@@ -576,10 +576,10 @@ Signed-off-by: John Crispin <blogic@openwrt.org>
 +#define MT7621_GPIO_MODE_SDHCI_SHIFT	18
 +#define MT7621_GPIO_MODE_SDHCI_GPIO	1
 +
-+static struct rt2880_pmx_func uart1_grp[] =  { FUNC("uart", 0, 1, 2) };
++static struct rt2880_pmx_func uart1_grp[] =  { FUNC("uart1", 0, 1, 2) };
 +static struct rt2880_pmx_func i2c_grp[] =  { FUNC("i2c", 0, 3, 2) };
-+static struct rt2880_pmx_func uart3_grp[] = { FUNC("uart", 0, 5, 4) };
-+static struct rt2880_pmx_func uart2_grp[] = { FUNC("uart", 0, 9, 4) };
++static struct rt2880_pmx_func uart2_grp[] = { FUNC("uart2", 0, 5, 4) };
++static struct rt2880_pmx_func uart3_grp[] = { FUNC("uart3", 0, 9, 4) };
 +static struct rt2880_pmx_func jtag_grp[] = { FUNC("jtag", 0, 13, 5) };
 +static struct rt2880_pmx_func wdt_grp[] = {
 +	FUNC("wdt rst", 0, 18, 1),
@@ -604,8 +604,8 @@ Signed-off-by: John Crispin <blogic@openwrt.org>
 +static struct rt2880_pmx_group mt7621_pinmux_data[] = {
 +	GRP("uart1", uart1_grp, 1, MT7621_GPIO_MODE_UART1),
 +	GRP("i2c", i2c_grp, 1, MT7621_GPIO_MODE_I2C),
-+	GRP("uart3", uart2_grp, 1, MT7621_GPIO_MODE_UART2),
-+	GRP("uart2", uart3_grp, 1, MT7621_GPIO_MODE_UART3),
++	GRP("uart2", uart2_grp, 1, MT7621_GPIO_MODE_UART2),
++	GRP("uart3", uart3_grp, 1, MT7621_GPIO_MODE_UART3),
 +	GRP("jtag", jtag_grp, 1, MT7621_GPIO_MODE_JTAG),
 +	GRP_G("wdt", wdt_grp, MT7621_GPIO_MODE_WDT_MASK,
 +		MT7621_GPIO_MODE_WDT_GPIO, MT7621_GPIO_MODE_WDT_SHIFT),
