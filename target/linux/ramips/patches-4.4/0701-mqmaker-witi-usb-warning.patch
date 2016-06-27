@@ -1,0 +1,14 @@
+--- a/drivers/usb/host/xhci-ring.c	2016-06-27 10:18:16.123246423 +0800
++++ b/drivers/usb/host/xhci-ring-new.c	2016-06-27 12:39:03.168798747 +0800
+@@ -2439,9 +2439,11 @@
+ 			 */
+ 			if (!(trb_comp_code == COMP_STOP ||
+ 						trb_comp_code == COMP_STOP_INVAL)) {
++				/*
+ 				xhci_warn(xhci, "WARN Event TRB for slot %d ep %d with no TDs queued?\n",
+ 						TRB_TO_SLOT_ID(le32_to_cpu(event->flags)),
+ 						ep_index);
++				*/
+ 				xhci_dbg(xhci, "Event TRB with TRB type ID %u\n",
+ 						(le32_to_cpu(event->flags) &
+ 						 TRB_TYPE_BITMASK)>>10);
