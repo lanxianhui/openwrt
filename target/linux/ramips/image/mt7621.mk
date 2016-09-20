@@ -93,7 +93,7 @@ TARGET_DEVICES += sap-g3200u3
 
 define Device/witi
   DTS := WITI
-  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
 endef
 TARGET_DEVICES += witi
 
